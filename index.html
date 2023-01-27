@@ -7,18 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    
     <button class="vibra" type="submit" onclick="vibraPattern()">vibrar</button>
-    
     <button class="notification">notificacion</button>
     <button class="vernotification">ver notificacion</button>
-    
     <script>
         function vibraPattern(){
             navigator.vibrate([300,100,300,100,300]);
             if(navigator.vibrate){ 
                 console.log("vibra");
-            new Notification("el telefono vibra")
+            new Notification("el telefono vibra");
+
+
+        }
+
+    }   
             
             const notificatBtn = document.querySelector(".notification");
 
@@ -26,18 +28,14 @@
                 Notification.requestPermission().then(resultado =>{
                     console.log("respuesta: ",resultado)
                 })
-
             })
-
             const Vernotification = document.querySelector(".vernotification")
+            
             Vernotification.addEventListener("click",()=>{
                 if(Notification.permission === "granted"){
                     new Notification("juan es calvo");
                 }
             })
-
-            }   
-        }
     </script>
     
 </body>
