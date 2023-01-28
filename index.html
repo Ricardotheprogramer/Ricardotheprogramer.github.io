@@ -15,27 +15,36 @@
             navigator.vibrate([300,100,300,100,300]);
             if(navigator.vibrate){ 
                 console.log("vibra");
-            new Notification("el telefono vibra");
-
-
-        }
-
-    }   
+                new Notification("el telefono vibra");
+                
+                
+            }
             
-            const notificatBtn = document.querySelector(".notification");
+        }   
+        
 
-            notificatBtn.addEventListener("click",()=>{
-                Notification.requestPermission().then(resultado =>{
-                    console.log("respuesta: ",resultado)
-                })
+
+        const notificatBtn = document.querySelector(".notification");
+        
+        notificatBtn.addEventListener("click",()=>{
+            Notification.requestPermission().then(resultado =>{
+                console.log("respuesta: ",resultado);
             })
-            const Vernotification = document.querySelector(".vernotification")
-            
-            Vernotification.addEventListener("click",()=>{
-                if(Notification.permission === "granted"){
-                    new Notification("juan es calvo");
+        })
+        const Vernotification = document.querySelector(".vernotification")
+        
+        Vernotification.addEventListener("click",()=>{
+            if(Notification.permission === "granted"){
+                let notificacion = new Notification("juan es calvo",{
+                    icon:"logo.svg",
+                    body:"juan es calvo"
+                });
+                notificacion.onclick = function(){
+                    window.open("http://google.com")
                 }
-            })
+            }
+          
+        })
     </script>
     
 </body>
