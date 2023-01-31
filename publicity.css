@@ -239,10 +239,6 @@ header .textos-header{
 
 
 
-
-
-
-
 footer{
     background-color: #19151d;
     width: 100%;
@@ -336,5 +332,12 @@ footer{
     }
     .servicio-ind p{
         margin:  20px ;
+    }
+    .servicio-cont{
+        flex-direction: column;
+    }
+    .servicio-ind{
+        width: 100%;
+        font-size: 20px;
     }
 }
