@@ -275,7 +275,7 @@ footer{
 
 @media  (max-width:900px) {
  header{
-   /* background: linear-gradient(to right, #240b36b5, #c314319c),url(img/corsa.jpg); */
+   background: linear-gradient(to right, #240b36b5, #c314319c),url(img/corsa.jpg); 
     background-repeat: no-repeat;
     background-position:center ;
     background-attachment:fixed;
