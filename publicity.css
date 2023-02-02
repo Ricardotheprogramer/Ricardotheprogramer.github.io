@@ -272,7 +272,10 @@ footer{
 .titulo-final{
     text-align: center;
 }
-
+.servicio-ind img{
+    height: 250px;
+    width: 250px;
+}
 @media  (max-width:900px) {
  header{
    background: linear-gradient(to right, #240b36b5, #c314319c),url(img/corsa.jpg); 
